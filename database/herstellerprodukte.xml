@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Herstellerprodukte xmlns="https://gunnarwitschi.github.io/BAG_TA/schema">
+<Herstellerprodukt id="HP-001"><Name>Apache HTTP Server</Name><Hersteller>Apache Software Foundation</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-002"><Name>SUSE Linux Enterprise Server</Name><Hersteller>SUSE</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-003"><Name>Posit Workbench</Name><Hersteller>Posit</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-004"><Name>Apache Airflow</Name><Hersteller>Apache Software Foundation</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-005"><Name>Microsoft SQL Server</Name><Hersteller>Microsoft</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-006"><Name>Dell ECS</Name><Hersteller>Dell Technologies</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-007"><Name>Gazelle</Name><Hersteller>IHE International / Gazelle</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-008"><Name>Angular</Name><Hersteller>Google</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-009"><Name>Airlock</Name><Hersteller>Ergon Informatik AG</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-010"><Name>Azure FHIR Service</Name><Hersteller>Microsoft</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-011"><Name>Microsoft Azure</Name><Hersteller>Microsoft</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-012"><Name>Oracle Database</Name><Hersteller>Oracle</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-013"><Name>R</Name><Hersteller>R Project</Hersteller></Herstellerprodukt>
+<Herstellerprodukt id="HP-014"><Name>Airlock IAM</Name><Hersteller>Ergon Informatik AG</Hersteller></Herstellerprodukt>
+</Herstellerprodukte>
