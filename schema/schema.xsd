@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://gunnarwitschi.github.io/BAG_TA/schema" xmlns="https://gunnarwitschi.github.io/BAG_TA/schema" elementFormDefault="qualified">
+  <xs:complexType name="ObjectType"><xs:sequence><xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/></xs:sequence><xs:attribute name="id" type="xs:string" use="required"/></xs:complexType>
+  <xs:element name="Fachanwendungen"><xs:complexType><xs:sequence><xs:element name="Fachanwendung" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="Technologiegruppen"><xs:complexType><xs:sequence><xs:element name="Technologiegruppe" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="Technologien"><xs:complexType><xs:sequence><xs:element name="Technologie" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="Technologieversionen"><xs:complexType><xs:sequence><xs:element name="Technologieversion" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="Herstellerprodukte"><xs:complexType><xs:sequence><xs:element name="Herstellerprodukt" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="Herstellerproduktversionen"><xs:complexType><xs:sequence><xs:element name="Herstellerproduktversion" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="ExterneURLs"><xs:complexType><xs:sequence><xs:element name="ExterneURL" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="Beziehungen"><xs:complexType><xs:sequence><xs:element name="Beziehung" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+  <xs:element name="Schritt2Abdeckung"><xs:complexType><xs:sequence><xs:element name="Eintrag" type="ObjectType" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:element>
+</xs:schema>
