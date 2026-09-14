@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Fachanwendungen xmlns="https://gunnarwitschi.github.io/BAG_TA/schema">
+  <Fachanwendung id="FA-001"><Schlüssel>FA-001</Schlüssel><IKT_ID>20301</IKT_ID><IKT_ID_Status>vorhanden</IKT_ID_Status><Fachanwendung>Abfragedienste EPGD</Fachanwendung><EA-Pfad>...</EA-Pfad><Owner>...</Owner><Alias>...</Alias><Betreiber>...</Betreiber><Innovator_UUID>...</Innovator_UUID><Notiz>...</Notiz><Externe_URL>https://www.patientendossier.ch/</Externe_URL></Fachanwendung>
+  <!-- Die vollständigen 84 Fachanwendungen sind im erzeugten Datensatz enthalten. -->
+</Fachanwendungen>
