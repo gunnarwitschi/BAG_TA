@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Technologieversionen xmlns="https://gunnarwitschi.github.io/BAG_TA/schema">
-<Technologieversion id="TV-001"><Technologie-Schlüssel>T-017</Technologie-Schlüssel><Name>SUSE Linux Enterprise Server 15</Name><End_of_Life>2031-07-31</End_of_Life><Betrieb_von/><Betrieb_bis/><Quelle>Hersteller-Lifecycle; genaue BAG Service-Pack-Version nicht belegt.</Quelle></Technologieversion>
-</Technologieversionen>
