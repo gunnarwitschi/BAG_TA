@@ -1,83 +1,118 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
 <defs>
-<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 z" fill="#333"/></marker>
-<marker id="d" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 z" fill="#777"/></marker>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 z" fill="#263142"/></marker>
+<marker id="d" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 z" fill="#496b9b"/></marker>
 <style>
-.title{font:700 30px Arial;fill:#172033}.sub{font:16px Arial;fill:#596273}.head{font:700 20px Arial;fill:#172033}.txt{font:15px Arial;fill:#263142}.lab{font:700 15px Arial;fill:#333}.small{font:13px Arial;fill:#596273}.rel{stroke:#333;stroke-width:2;fill:none;marker-end:url(#a)}.temp{stroke:#777;stroke-width:2;stroke-dasharray:8 7;fill:none;marker-end:url(#d)}
+.title{font:700 30px Arial;fill:#172033}.sub{font:16px Arial;fill:#596273}.head{font:700 20px Arial;fill:#172033}.txt{font:15px Arial;fill:#263142}.lab{font:700 15px Arial;fill:#263142}.small{font:13px Arial;fill:#596273}.rel{stroke:#263142;stroke-width:2.5;fill:none;marker-end:url(#a)}.temp{stroke:#496b9b;stroke-width:2.5;stroke-dasharray:9 7;fill:none;marker-end:url(#d)}
 </style></defs>
-<rect width="1500" height="980" fill="white"/>
-<text x="55" y="52" class="title">Metamodell Technische Architektur BAG</text>
-<text x="55" y="80" class="sub">Objekte und Beziehungen · Stand September 2026</text>
+<rect width="1500" height="1000" fill="white"/>
+<text x="55" y="52" class="title">Metamodell Technische Architektur – BAG Fachanwendungen</text>
+<text x="55" y="82" class="sub">Objekte, Beziehungen und temporäre Beziehungen bei noch unbekannter Version</text>
+<text x="1270" y="52" class="small">Version 1.1 · 16.09.2026</text>
 
 <!-- FA -->
-<rect x="55" y="190" width="255" height="215" rx="7" fill="#e9ddff" stroke="#394150"/>
-<rect x="55" y="190" width="255" height="55" rx="7" fill="#d8c4ff" stroke="#394150"/>
-<text x="182" y="224" text-anchor="middle" class="head">Fachanwendung (FA)</text>
-<text x="78" y="275" class="txt">• Schlüssel (FA-xxx)</text><text x="78" y="301" class="txt">• Name</text><text x="78" y="327" class="txt">• IKT-ID (optional)</text><text x="78" y="353" class="txt">• Owner</text><text x="78" y="379" class="txt">• Betreiber</text>
+<rect x="55" y="300" width="285" height="210" rx="8" fill="#e9ddff" stroke="#394150" stroke-width="1.5"/>
+<rect x="55" y="300" width="285" height="58" rx="8" fill="#d8c4ff" stroke="#394150"/>
+<text x="197" y="336" text-anchor="middle" class="head">Fachanwendung (FA)</text>
+<text x="80" y="390" class="txt">• Schlüssel (FA-xxx)</text><text x="80" y="417" class="txt">• Name</text><text x="80" y="444" class="txt">• IKT-ID (optional)</text><text x="80" y="471" class="txt">• Owner</text><text x="80" y="498" class="txt">• Betreiber</text>
 
-<!-- TV -->
-<rect x="470" y="150" width="290" height="225" rx="7" fill="#dbeaff" stroke="#394150"/>
-<rect x="470" y="150" width="290" height="55" rx="7" fill="#bcd8ff" stroke="#394150"/>
-<text x="615" y="184" text-anchor="middle" class="head">Technologieversion (TV)</text>
-<text x="493" y="235" class="txt">• Schlüssel (TV-xxx)</text><text x="493" y="261" class="txt">• Versionsbezeichnung</text><text x="493" y="287" class="txt">• Betrieb von / bis</text><text x="493" y="313" class="txt">• End of Life</text><text x="493" y="339" class="txt">• Lifecycle-Informationen</text>
-
-<!-- T -->
-<rect x="880" y="150" width="250" height="190" rx="7" fill="#e3f3dc" stroke="#394150"/>
-<rect x="880" y="150" width="250" height="55" rx="7" fill="#cce8c1" stroke="#394150"/>
-<text x="1005" y="184" text-anchor="middle" class="head">Technologie (T)</text>
-<text x="903" y="235" class="txt">• Schlüssel (T-xxx)</text><text x="903" y="261" class="txt">• Name</text><text x="903" y="287" class="txt">• Beschreibung</text>
+<!-- Technology block -->
+<rect x="500" y="120" width="900" height="300" rx="12" fill="#f4f9ff" stroke="#8ab5e8" stroke-width="1.5"/>
+<text x="950" y="150" text-anchor="middle" class="head">Technologien</text>
 
 <!-- TG -->
-<rect x="1220" y="115" width="245" height="330" rx="7" fill="#e3f3dc" stroke="#394150"/>
-<rect x="1220" y="115" width="245" height="55" rx="7" fill="#cce8c1" stroke="#394150"/>
-<text x="1342" y="149" text-anchor="middle" class="head">Technologiegruppe (TG)</text>
-<text x="1242" y="197" class="txt">8 Gruppen:</text>
-<text x="1242" y="222" class="txt">TG-001 Integration &amp;</text><text x="1242" y="242" class="txt">  Interoperabilität</text>
-<text x="1242" y="267" class="txt">TG-005 Web &amp; Applikation</text>
-<text x="1242" y="292" class="txt">TG-007 Plattform &amp; Cloud</text>
-<text x="1242" y="317" class="txt">TG-008 Datenanalyse &amp;</text><text x="1242" y="337" class="txt">  Orchestrierung</text>
-<text x="1242" y="362" class="txt">TG-009 Datenmanagement &amp; Storage</text>
-<text x="1242" y="387" class="txt">TG-011 Test &amp; Validierung</text>
-<text x="1242" y="412" class="txt">TG-013 Datenübertragung</text>
-<text x="1242" y="437" class="txt">TG-014 Identity &amp; Access Management</text>
+<rect x="540" y="190" width="245" height="170" rx="8" fill="#e3f3dc" stroke="#394150"/>
+<rect x="540" y="190" width="245" height="52" rx="8" fill="#cce8c1" stroke="#394150"/>
+<text x="662" y="222" text-anchor="middle" class="head">Technologiegruppe (TG)</text>
+<text x="563" y="272" class="txt">8 konsolidierte Gruppen</text>
+<text x="563" y="299" class="txt">z.B. TG-001</text>
+<text x="563" y="326" class="txt">Protokolle &amp; Standards</text>
 
-<!-- HPV -->
-<rect x="470" y="505" width="290" height="225" rx="7" fill="#fff1c9" stroke="#394150"/>
-<rect x="470" y="505" width="290" height="55" rx="7" fill="#ffe4a1" stroke="#394150"/>
-<text x="615" y="539" text-anchor="middle" class="head">Herstellerproduktversion (HPV)</text>
-<text x="493" y="590" class="txt">• Schlüssel (HPV-xxx)</text><text x="493" y="616" class="txt">• Versionsbezeichnung</text><text x="493" y="642" class="txt">• End of Life</text><text x="493" y="668" class="txt">• End of Sales</text><text x="493" y="694" class="txt">• End of Support</text><text x="493" y="720" class="txt">• …</text>
+<!-- T -->
+<rect x="860" y="190" width="245" height="170" rx="8" fill="#e3f3dc" stroke="#394150"/>
+<rect x="860" y="190" width="245" height="52" rx="8" fill="#cce8c1" stroke="#394150"/>
+<text x="982" y="222" text-anchor="middle" class="head">Technologie (T)</text>
+<text x="883" y="272" class="txt">• Schlüssel (T-xxx)</text>
+<text x="883" y="299" class="txt">• Name</text>
+<text x="883" y="326" class="txt">• Beschreibung</text>
+
+<!-- TV -->
+<rect x="1180" y="190" width="180" height="170" rx="8" fill="#dbeaff" stroke="#394150"/>
+<rect x="1180" y="190" width="180" height="52" rx="8" fill="#bcd8ff" stroke="#394150"/>
+<text x="1270" y="222" text-anchor="middle" class="head">Technologieversion</text>
+<text x="1270" y="245" text-anchor="middle" class="head">(TV)</text>
+<text x="1202" y="276" class="txt">• Schlüssel</text>
+<text x="1202" y="303" class="txt">• Version</text>
+<text x="1202" y="330" class="txt">• Lifecycle</text>
+
+<!-- Technology internal relations -->
+<path d="M785 275 L860 275" class="rel"/>
+<text x="822" y="258" text-anchor="middle" class="lab">gruppiert</text>
+<path d="M1105 275 L1180 275" class="rel"/>
+<text x="1142" y="258" text-anchor="middle" class="lab">hat Version</text>
+
+<!-- FA technology relations -->
+<path d="M340 350 C400 350 420 275 500 275" class="temp"/>
+<text x="410" y="318" text-anchor="middle" class="lab">verwendet · TEMPORÄR</text>
+<text x="410" y="337" text-anchor="middle" class="small">wenn TV noch unbekannt</text>
+
+<path d="M340 410 C430 410 445 450 540 450 C800 450 1080 450 1270 360" class="rel"/>
+<text x="805" y="439" text-anchor="middle" class="lab">verwendet · FINAL</text>
+<text x="805" y="458" text-anchor="middle" class="small">FA → TV, sobald konkrete Version bekannt</text>
+
+<!-- Manufacturer product block -->
+<rect x="500" y="535" width="900" height="250" rx="12" fill="#fff9ef" stroke="#e7b76b" stroke-width="1.5"/>
+<text x="950" y="565" text-anchor="middle" class="head">Herstellerprodukte</text>
 
 <!-- HP -->
-<rect x="880" y="505" width="250" height="190" rx="7" fill="#ffe5cc" stroke="#394150"/>
-<rect x="880" y="505" width="250" height="55" rx="7" fill="#ffd0a6" stroke="#394150"/>
-<text x="1005" y="539" text-anchor="middle" class="head">Herstellerprodukt (HP)</text>
-<text x="903" y="590" class="txt">• Schlüssel (HP-xxx)</text><text x="903" y="616" class="txt">• Produktname</text><text x="903" y="642" class="txt">• Hersteller</text><text x="903" y="668" class="txt">• Beschreibung</text>
+<rect x="650" y="610" width="280" height="145" rx="8" fill="#ffe5cc" stroke="#394150"/>
+<rect x="650" y="610" width="280" height="52" rx="8" fill="#ffd0a6" stroke="#394150"/>
+<text x="790" y="642" text-anchor="middle" class="head">Herstellerprodukt (HP)</text>
+<text x="675" y="692" class="txt">• Schlüssel (HP-xxx)</text>
+<text x="675" y="719" class="txt">• Produktname</text>
+<text x="675" y="746" class="txt">• Hersteller</text>
+
+<!-- HPV -->
+<rect x="1050" y="610" width="280" height="145" rx="8" fill="#fff1c9" stroke="#394150"/>
+<rect x="1050" y="610" width="280" height="52" rx="8" fill="#ffe4a1" stroke="#394150"/>
+<text x="1190" y="642" text-anchor="middle" class="head">Herstellerproduktversion</text>
+<text x="1190" y="665" text-anchor="middle" class="head">(HPV)</text>
+<text x="1075" y="710" class="txt">• Schlüssel (HPV-xxx)</text>
+<text x="1075" y="737" class="txt">• Version</text>
+
+<!-- HP internal relation -->
+<path d="M930 682 L1050 682" class="rel"/>
+<text x="990" y="665" text-anchor="middle" class="lab">hat Version</text>
+
+<!-- FA product relations -->
+<path d="M340 430 C450 500 500 680 650 680" class="temp"/>
+<text x="460" y="585" text-anchor="middle" class="lab">verwendet · TEMPORÄR</text>
+<text x="460" y="604" text-anchor="middle" class="small">wenn HPV noch unbekannt</text>
+
+<path d="M340 485 C500 540 760 575 920 575 C1050 575 1130 575 1190 610" class="rel"/>
+<text x="760" y="560" text-anchor="middle" class="lab">verwendet · FINAL</text>
+<text x="760" y="579" text-anchor="middle" class="small">FA → HPV, sobald konkrete Version bekannt</text>
 
 <!-- URL -->
-<rect x="1220" y="505" width="245" height="190" rx="7" fill="#ffe0e0" stroke="#394150"/>
-<rect x="1220" y="505" width="245" height="55" rx="7" fill="#ffc4c4" stroke="#394150"/>
-<text x="1342" y="539" text-anchor="middle" class="head">Externe URL (URL)</text>
-<text x="1242" y="590" class="txt">• Schlüssel (URL-xxx)</text><text x="1242" y="616" class="txt">• Objekttyp</text><text x="1242" y="642" class="txt">• Objektschlüssel</text><text x="1242" y="668" class="txt">• Externe URL</text>
+<rect x="55" y="610" width="285" height="145" rx="8" fill="#ffe0e0" stroke="#394150"/>
+<rect x="55" y="610" width="285" height="52" rx="8" fill="#ffc4c4" stroke="#394150"/>
+<text x="197" y="642" text-anchor="middle" class="head">Externe URL (URL)</text>
+<text x="80" y="692" class="txt">• Schlüssel (URL-xxx)</text>
+<text x="80" y="719" class="txt">• Objekttyp / Objektschlüssel</text>
+<text x="80" y="746" class="txt">• Externe URL</text>
 
-<!-- Technology relationships -->
-<path d="M310 235 L470 235" class="rel"/><text x="390" y="218" text-anchor="middle" class="lab">verwendet</text>
-<path d="M310 310 C360 310 390 355 430 355 L430 430 L615 430 L615 505" class="temp"/>
-<text x="395" y="392" text-anchor="middle" class="lab">verwendet · temporär</text><text x="395" y="411" text-anchor="middle" class="small">TV noch unbekannt</text>
-<path d="M760 235 L880 235" class="rel"/><text x="820" y="218" text-anchor="middle" class="lab">gehört zu</text>
-<path d="M1130 235 L1220 235" class="rel"/><text x="1175" y="218" text-anchor="middle" class="lab">gruppiert</text>
+<!-- Legend -->
+<rect x="55" y="820" width="640" height="125" rx="8" fill="#f7f8fa" stroke="#c8ced8"/>
+<text x="78" y="850" class="head">Legende</text>
+<path d="M80 880 L155 880" class="rel"/><text x="175" y="886" class="txt">Permanente Beziehung</text>
+<path d="M80 910 L155 910" class="temp"/><text x="175" y="916" class="txt">Temporäre Beziehung: Version noch unbekannt</text>
+<text x="78" y="938" class="small">Temporär = FA → T bzw. FA → HP · Final = FA → TV bzw. FA → HPV</text>
 
-<!-- Product relationships -->
-<path d="M310 355 C365 355 405 590 470 590" class="rel"/><text x="365" y="520" class="lab">verwendet</text>
-<path d="M310 380 C365 380 405 465 430 465 L430 750 L615 750 L615 730" class="temp"/><text x="370" y="445" class="lab">verwendet · temporär</text><text x="370" y="464" class="small">HPV noch unbekannt</text>
-<path d="M760 590 L880 590" class="rel"/><text x="820" y="573" text-anchor="middle" class="lab">gehört zu</text>
-
-<!-- URL references -->
-<path d="M1130 315 C1170 350 1190 440 1220 540" class="rel"/><text x="1150" y="420" class="lab">referenziert</text>
-<path d="M1130 650 L1220 650" class="rel"/><text x="1175" y="633" text-anchor="middle" class="lab">referenziert</text>
-<text x="55" y="800" class="head">Modellierungsregeln</text>
-<text x="55" y="830" class="txt">1. FA verwendet direkt TV bzw. HPV, wenn die konkrete Version bekannt ist.</text>
-<text x="55" y="855" class="txt">2. Ist die Version unbekannt, darf vorübergehend FA → T bzw. FA → HP verwendet werden.</text>
-<text x="55" y="880" class="txt">3. Nach Ermittlung der Version wird die temporäre Beziehung auf TV bzw. HPV umgehängt.</text>
-<text x="55" y="905" class="txt">4. Für dieselbe Verwendung bestehen nicht gleichzeitig FA → T und FA → TV bzw. FA → HP und FA → HPV.</text>
-<text x="55" y="930" class="txt">5. TG gruppiert T; T gehört über seine Versionen zu TV. TG ist fachanwendungsunabhängig.</text>
+<!-- Rules -->
+<rect x="720" y="820" width="680" height="125" rx="8" fill="#f7f8fa" stroke="#c8ced8"/>
+<text x="743" y="850" class="head">Modellierungsregeln</text>
+<text x="743" y="877" class="txt">1. FA verwendet primär die konkrete Version: FA → TV bzw. FA → HPV.</text>
+<text x="743" y="901" class="txt">2. Ist die Version unbekannt, ist vorübergehend FA → T bzw. FA → HP zulässig.</text>
+<text x="743" y="925" class="txt">3. Sobald die Version bekannt ist, wird die temporäre Beziehung auf TV bzw. HPV umgestellt.</text>
+<text x="743" y="949" class="txt">4. TG gruppiert T und ist fachanwendungsunabhängig; TG ist kein Zwischenobjekt für FA-Zuordnungen.</text>
 </svg>
