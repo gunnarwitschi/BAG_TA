@@ -49,21 +49,6 @@ Der aktuelle Modellstand umfasst **8 konsolidierte Technologiegruppen**:
 | **TG-013** | Datenübertragung |
 | **TG-014** | Identity & Access Management |
 
-### Konsolidierungen
-
-Die bisherigen Technologiegruppen wurden auf acht fachanwendungsunabhängige Gruppen konsolidiert:
-
-- TG-001, TG-002, TG-003, TG-004, TG-010, TG-015 und TG-020 → **TG-001 Integration & Interoperabilität**
-- TG-005, TG-006 und TG-017 → **TG-005 Web & Applikation**
-- TG-007, TG-012 und TG-021 → **TG-007 Plattform & Cloud**
-- TG-008 → **TG-008 Datenanalyse & Orchestrierung**
-- TG-009, TG-016 und TG-019 → **TG-009 Datenmanagement & Storage**
-- TG-011 → **TG-011 Test & Validierung**
-- TG-013 und TG-023 → **TG-013 Datenübertragung**
-- TG-014, TG-018 und TG-022 → **TG-014 Identity & Access Management**
-
-Die bestehenden Schlüssel der Zielgruppen bleiben erhalten; dadurch sind Lücken in der Nummerierung beabsichtigt. Im aktuellen Zielmodell existieren damit **8 TG**.
-
 ## Beziehungen
 
 ### Fachanwendung → Technologieversion
