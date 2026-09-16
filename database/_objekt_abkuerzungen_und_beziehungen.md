@@ -28,13 +28,7 @@ Die zentrale Architekturbeziehung zwischen einer Fachanwendung und einer Technol
 FA-002  ── verwendet ──>  T-001
 ```
 
-Die Technologiegruppe ist **kein Zwischenknoten**:
-
-```text
-FA-002  ──> TG-001 ──> T-001    # nicht als Architekturbeziehung verwenden
-```
-
-Stattdessen gilt:
+### Technologie und Technologiegruppe
 
 ```text
 FA-002  ── verwendet ──>  T-001
