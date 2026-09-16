@@ -9,7 +9,7 @@ Diese Dokumentation beschreibt die im technischen Architekturmodell verwendeten 
 | Kürzel | Bezeichnung | Umfang |
 |---|---|---|
 | **FA** | Fachanwendung | Eine fachlich abgegrenzte Anwendung bzw. ein Anwendungssystem des BAG. |
-| **TG** | Technologiegruppe | Eine Gruppierung von Technologien. Sie dient zur Strukturierung und Klassifikation von Technologien. |
+| **TG** | Technologiegruppe | Eine fachanwendungsunabhängige Gruppierung von Technologien. Sie dient zur Strukturierung und Klassifikation von Technologien. |
 | **T** | Technologie | Ein konkreter technischer Baustein bzw. eine Technologie. |
 | **TV** | Technologieversion | Eine konkrete Version einer Technologie, einschliesslich Lifecycle-Informationen. |
 | **HP** | Herstellerprodukt | Ein konkretes Produkt eines Herstellers, das bei einer Fachanwendung eingesetzt wird bzw. dessen Einsatz dokumentiert oder recherchiert wurde. |
@@ -54,13 +54,21 @@ Die bestehenden Schlüssel der bereits etablierten Gruppen bleiben erhalten.
 
 ## Beziehungen
 
-### Fachanwendung und Technologieversion
+### Fachanwendung und Technologie
+
+Eine Fachanwendung kann einer Technologie direkt zugeordnet werden, wenn die konkrete Technologieversion noch nicht bekannt ist:
+
+```text
+FA-xxx ── verwendet ──> T-xxx
+```
+
+Sobald die konkrete Technologieversion bekannt ist, wird die Beziehung auf die Technologieversion umgehängt:
 
 ```text
 FA-xxx ── verwendet ──> TV-xxx
 ```
 
-Eine Fachanwendung verwendet eine konkrete Technologieversion.
+Die beiden Beziehungen stellen somit zwei Zustände derselben Zuordnung dar. Für dieselbe Verwendung wird nach Möglichkeit nicht gleichzeitig eine Beziehung von FA zu T und von FA zu TV geführt. Die Beziehung FA → T ist eine temporäre Zuordnung, bis die verwendete Version ermittelt wurde.
 
 ### Technologiegruppe, Technologie und Technologieversion
 
@@ -72,7 +80,23 @@ Damit gilt die Modellierungsregel:
 
 **TG gruppiert T gruppiert TV**
 
-Die Technologiegruppe ist kein Zwischenobjekt zwischen Fachanwendung und Technologieversion.
+Die Technologiegruppe ist kein Zwischenobjekt zwischen Fachanwendung und Technologie. Die Fachanwendung verwendet T bzw. nach Auflösung der Version TV direkt.
+
+### Fachanwendung und Herstellerprodukt
+
+Auch bei Herstellerprodukten kann die Zuordnung zunächst auf Produktebene erfolgen, wenn die konkrete Produktversion noch nicht bekannt ist:
+
+```text
+FA-xxx ── verwendet ──> HP-xxx
+```
+
+Sobald die konkrete Herstellerproduktversion bekannt ist, wird die Beziehung auf die Herstellerproduktversion umgehängt:
+
+```text
+FA-xxx ── verwendet ──> HPV-xxx
+```
+
+Auch hier stellen die beiden Beziehungen zwei Zustände derselben Zuordnung dar. Für dieselbe Verwendung wird nach Möglichkeit nicht gleichzeitig eine Beziehung von FA zu HP und von FA zu HPV geführt. Die Beziehung FA → HP ist eine temporäre Zuordnung, bis die verwendete Version ermittelt wurde.
 
 ### Herstellerprodukt und Version
 
@@ -91,6 +115,9 @@ HP-xxx ── hat Version ──> HPV-xxx
 - `externe_urls/URL-xxx.xml`
 - `beziehungen/<Von-Schlüssel>__<Zu-Schlüssel>.xml`
 
-Beispiel einer direkten Architekturbeziehung:
+Beispiele für direkte Architekturbeziehungen:
 
-`beziehungen/FA-002__TV-xxx.xml`
+- `beziehungen/FA-002__T-xxx.xml` – temporäre Zuordnung, wenn die Version noch unbekannt ist
+- `beziehungen/FA-002__TV-xxx.xml` – aufgelöste Zuordnung zu einer konkreten Technologieversion
+- `beziehungen/FA-002__HP-xxx.xml` – temporäre Zuordnung, wenn die Produktversion noch unbekannt ist
+- `beziehungen/FA-002__HPV-xxx.xml` – aufgelöste Zuordnung zu einer konkreten Herstellerproduktversion
