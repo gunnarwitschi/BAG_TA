@@ -22,8 +22,6 @@ Damit gilt:
 - **T gehört zu TV**
 - **TG ist fachanwendungsunabhängig**
 
-Die Technologiegruppe ist **kein Zwischenobjekt zwischen FA und T bzw. TV**.
-
 ## Objektkürzel
 
 | Kürzel | Bezeichnung |
@@ -38,39 +36,33 @@ Die Technologiegruppe ist **kein Zwischenobjekt zwischen FA und T bzw. TV**.
 
 ## Technologiegruppen
 
-Der aktuelle Modellstand umfasst **19 konsolidierte Technologiegruppen**. Die bestehenden Schlüssel der Zielgruppen bleiben erhalten; dadurch sind Lücken in der Nummerierung beabsichtigt.
+Der aktuelle Modellstand umfasst **8 konsolidierte Technologiegruppen**:
 
 | Schlüssel | Technologiegruppe |
 |---|---|
-| **TG-001** | Protokolle & Standards |
-| **TG-004** | Protokolle & Datenformate |
-| **TG-005** | Webserver |
-| **TG-006** | Backend-Technologie |
-| **TG-007** | Betriebsplattform |
+| **TG-001** | Integration & Interoperabilität |
+| **TG-005** | Web & Applikation |
+| **TG-007** | Plattform & Cloud |
 | **TG-008** | Datenanalyse & Orchestrierung |
-| **TG-009** | Datenbank & Storage |
-| **TG-010** | Interoperabilitätsstandards |
-| **TG-011** | Test- und Interoperabilitätsplattform |
-| **TG-012** | Web & Cloud |
+| **TG-009** | Datenmanagement & Storage |
+| **TG-011** | Test & Validierung |
 | **TG-013** | Datenübertragung |
-| **TG-014** | Authentifizierung |
-| **TG-015** | Datenzugriff & Integration |
-| **TG-016** | Datenmodellierung |
-| **TG-017** | Client |
-| **TG-018** | Identity & Access Management |
-| **TG-019** | Datenbank & Integration |
-| **TG-020** | Interoperabilität & Cloud |
-| **TG-021** | Cloud & Data Lake |
+| **TG-014** | Identity & Access Management |
 
 ### Konsolidierungen
 
-Folgende bisherige Technologiegruppen wurden konsolidiert:
+Die bisherigen Technologiegruppen wurden auf acht fachanwendungsunabhängige Gruppen konsolidiert:
 
-- TG-002 + TG-003 → **TG-001 Protokolle & Standards**
-- TG-022 → **TG-018 Identity & Access Management**
-- TG-023 → **TG-013 Datenübertragung**
+- TG-001, TG-002, TG-003, TG-004, TG-010, TG-015 und TG-020 → **TG-001 Integration & Interoperabilität**
+- TG-005, TG-006 und TG-017 → **TG-005 Web & Applikation**
+- TG-007, TG-012 und TG-021 → **TG-007 Plattform & Cloud**
+- TG-008 → **TG-008 Datenanalyse & Orchestrierung**
+- TG-009, TG-016 und TG-019 → **TG-009 Datenmanagement & Storage**
+- TG-011 → **TG-011 Test & Validierung**
+- TG-013 und TG-023 → **TG-013 Datenübertragung**
+- TG-014, TG-018 und TG-022 → **TG-014 Identity & Access Management**
 
-Die übrigen 16 Technologiegruppen bleiben mit ihrem bestehenden Schlüssel bestehen. Die vier nicht mehr benötigten TG-Schlüssel **TG-002, TG-003, TG-022 und TG-023** werden nicht weiter als eigenständige Technologiegruppen geführt.
+Die bestehenden Schlüssel der Zielgruppen bleiben erhalten; dadurch sind Lücken in der Nummerierung beabsichtigt. Im aktuellen Zielmodell existieren damit **8 TG**.
 
 ## Beziehungen
 
@@ -82,15 +74,13 @@ Die Zielbeziehung des technischen Architekturmodells ist:
 FA-xxx ── verwendet ──> TV-xxx
 ```
 
-Im aktuellen Datenbestand können noch Zuordnungen **FA → T** bestehen, wenn die konkrete Technologieversion noch nicht ermittelt wurde. Diese sind als offene/temporäre Zuordnungen zu behandeln und werden bei Vorliegen einer belastbaren Version auf **FA → TV** umgestellt. Es werden keine Technologieversionen ohne belastbare Quelle erfunden.
+Im aktuellen Datenbestand existieren noch Zuordnungen **FA → T**, wenn die konkrete Version noch nicht ermittelt wurde. Diese sind als offene/temporäre Zuordnungen zu behandeln und werden bei Vorliegen der Version auf **FA → TV** umgestellt. Es werden keine Technologieversionen ohne belastbare Quelle erfunden.
 
 ### Technologiegruppe → Technologie → Technologieversion
 
 ```text
 TG-xxx ── gruppiert ──> T-xxx ── gehört zu ──> TV-xxx
 ```
-
-Die TG ist dabei unabhängig von der Fachanwendung. Eine Technologie kann von mehreren Fachanwendungen verwendet werden und wird trotzdem nur einmal unter einer Technologiegruppe geführt.
 
 ### Herstellerprodukte
 
