@@ -22,6 +22,8 @@ Damit gilt:
 - **T gehört zu TV**
 - **TG ist fachanwendungsunabhängig**
 
+Die Technologiegruppe ist **kein Zwischenobjekt zwischen FA und T bzw. TV**.
+
 ## Objektkürzel
 
 | Kürzel | Bezeichnung |
@@ -36,7 +38,7 @@ Damit gilt:
 
 ## Technologiegruppen
 
-Der aktuelle Modellstand umfasst 19 konsolidierte Technologiegruppen:
+Der aktuelle Modellstand umfasst **19 konsolidierte Technologiegruppen**. Die bestehenden Schlüssel der Zielgruppen bleiben erhalten; dadurch sind Lücken in der Nummerierung beabsichtigt.
 
 | Schlüssel | Technologiegruppe |
 |---|---|
@@ -62,11 +64,13 @@ Der aktuelle Modellstand umfasst 19 konsolidierte Technologiegruppen:
 
 ### Konsolidierungen
 
-- TG-002 + TG-003 → **TG-001**
-- TG-022 → **TG-018**
-- TG-023 → **TG-013**
+Folgende bisherige Technologiegruppen wurden konsolidiert:
 
-Die bestehenden Schlüssel der Zielgruppen bleiben erhalten; dadurch sind Lücken in der Nummerierung beabsichtigt.
+- TG-002 + TG-003 → **TG-001 Protokolle & Standards**
+- TG-022 → **TG-018 Identity & Access Management**
+- TG-023 → **TG-013 Datenübertragung**
+
+Die übrigen 16 Technologiegruppen bleiben mit ihrem bestehenden Schlüssel bestehen. Die vier nicht mehr benötigten TG-Schlüssel **TG-002, TG-003, TG-022 und TG-023** werden nicht weiter als eigenständige Technologiegruppen geführt.
 
 ## Beziehungen
 
@@ -78,13 +82,15 @@ Die Zielbeziehung des technischen Architekturmodells ist:
 FA-xxx ── verwendet ──> TV-xxx
 ```
 
-Im aktuellen Datenbestand existieren noch Zuordnungen **FA → T**, wenn die konkrete Version noch nicht ermittelt wurde. Diese sind als offene/temporäre Zuordnungen zu behandeln und werden bei Vorliegen der Version auf **FA → TV** umgestellt. Es werden keine Technologieversionen ohne belastbare Quelle erfunden.
+Im aktuellen Datenbestand können noch Zuordnungen **FA → T** bestehen, wenn die konkrete Technologieversion noch nicht ermittelt wurde. Diese sind als offene/temporäre Zuordnungen zu behandeln und werden bei Vorliegen einer belastbaren Version auf **FA → TV** umgestellt. Es werden keine Technologieversionen ohne belastbare Quelle erfunden.
 
 ### Technologiegruppe → Technologie → Technologieversion
 
 ```text
 TG-xxx ── gruppiert ──> T-xxx ── gehört zu ──> TV-xxx
 ```
+
+Die TG ist dabei unabhängig von der Fachanwendung. Eine Technologie kann von mehreren Fachanwendungen verwendet werden und wird trotzdem nur einmal unter einer Technologiegruppe geführt.
 
 ### Herstellerprodukte
 
