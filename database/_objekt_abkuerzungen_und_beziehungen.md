@@ -21,7 +21,6 @@ Damit gilt:
 - **TG gruppiert T**
 - **T gehört zu TV**
 - **TG ist fachanwendungsunabhängig**
-- **TG ist kein Zwischenobjekt zwischen FA und T/TV**
 
 ## Objektkürzel
 
