@@ -48,5 +48,7 @@
 <Beziehung id="FA-073__T-040"><Beziehungstyp>Fachanwendung → Technologie</Beziehungstyp><Von-Schlüssel>FA-073</Von-Schlüssel><Zu-Schlüssel>T-040</Zu-Schlüssel><Datenstatus>geplant / Zielarchitektur</Datenstatus></Beziehung>
 <Beziehung id="FA-074__T-041"><Beziehungstyp>Fachanwendung → Technologie</Beziehungstyp><Von-Schlüssel>FA-074</Von-Schlüssel><Zu-Schlüssel>T-041</Zu-Schlüssel><Datenstatus>aus Quelle</Datenstatus></Beziehung>
 <Beziehung id="FA-077__T-042"><Beziehungstyp>Fachanwendung → Technologie</Beziehungstyp><Von-Schlüssel>FA-077</Von-Schlüssel><Zu-Schlüssel>T-042</Zu-Schlüssel><Datenstatus>aus Quelle</Datenstatus></Beziehung>
-<Beziehung id="T-017__TV-001"><Beziehungstyp>Technologie → Technologieversion</Beziehungstyp><Von-Schlüssel>T-017</Von-Schlüssel><Zu-Schlüssel>TV-001</Zu-Schlüssel><Datenstatus>Webrecherche</Datenstatus></Beziehung>
+<Beziehung id="FA-016__HP-021"><Beziehungstyp>Fachanwendung → Herstellerprodukt</Beziehungstyp><Von-Schlüssel>FA-016</Von-Schlüssel><Zu-Schlüssel>HP-021</Zu-Schlüssel><Datenstatus>Webrecherche – historisch / ausser Betrieb</Datenstatus></Beziehung>
+<Beziehung id="FA-018__HP-022"><Beziehungstyp>Fachanwendung → Herstellerprodukt</Beziehungstyp><Von-Schlüssel>FA-018</Von-Schlüssel><Zu-Schlüssel>HP-022</Zu-Schlüssel><Datenstatus>Webrecherche – historisch</Datenstatus></Beziehung>
+<Beziehung id="T-019__TV-001"><Beziehungstyp>Technologie → Technologieversion</Beziehungstyp><Von-Schlüssel>T-019</Von-Schlüssel><Zu-Schlüssel>TV-001</Zu-Schlüssel><Datenstatus>Webrecherche</Datenstatus></Beziehung>
 </Beziehungen>
