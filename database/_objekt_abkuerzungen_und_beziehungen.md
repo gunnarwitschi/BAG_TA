@@ -18,9 +18,10 @@ TG ── gruppiert ────────────────────
 
 Damit gilt:
 - **FA verwendet TV**
-- **TG gruppiert T**
-- **T gehört zu TV**
+- **TV gehört zu T**
+- **T wird von TG gruppiert**
 - **TG ist fachanwendungsunabhängig**
+- Eine **Plattform bzw. ein Application Cluster ist keine Technologie** und wird nicht als T/TV modelliert.
 
 ## Objektkürzel
 
@@ -73,7 +74,7 @@ Die bestehenden Schlüssel der Zielgruppen bleiben erhalten; dadurch sind Lücke
 Die Zielbeziehung des technischen Architekturmodells ist:
 
 ```text
-FA-xxx ── verwendet ──> TV-xxx
+FA-xxx ── verwendet ──> TV-xxx ── gehört zu ──> T-xxx
 ```
 
 Im aktuellen Datenbestand existieren noch Zuordnungen **FA → T**, wenn die konkrete Version noch nicht ermittelt wurde. Diese sind als offene/temporäre Zuordnungen zu behandeln und werden bei Vorliegen der Version auf **FA → TV** umgestellt. Es werden keine Technologieversionen ohne belastbare Quelle erfunden.
@@ -81,7 +82,7 @@ Im aktuellen Datenbestand existieren noch Zuordnungen **FA → T**, wenn die kon
 ### Technologiegruppe → Technologie → Technologieversion
 
 ```text
-TG-xxx ── gruppiert ──> T-xxx ── gehört zu ──> TV-xxx
+TG-xxx ── gruppiert ──> T-xxx ── hat/umfasst ──> TV-xxx
 ```
 
 ### Herstellerprodukte
@@ -89,11 +90,18 @@ TG-xxx ── gruppiert ──> T-xxx ── gehört zu ──> TV-xxx
 Für Herstellerprodukte gilt analog:
 
 ```text
-FA-xxx ── verwendet ──> HP-xxx
-HP-xxx ── gehört zu ──> HPV-xxx
+FA-xxx ── verwendet ──> HPV-xxx ── gehört zu ──> HP-xxx
 ```
 
-Eine direkte FA→HP-Beziehung kann solange bestehen, wie die konkrete Produktversion nicht ermittelt ist.
+Eine direkte FA→HP-Beziehung kann solange bestehen, wie die konkrete Produktversion nicht ermittelt ist. Sobald die Version belastbar bekannt ist, wird auf FA→HPV umgehängt.
+
+## Plattformen und Application Cluster
+
+Plattformen und Application Cluster sind eigenständige Architekturkonzepte und keine Technologieobjekte.
+
+Beispiel:
+- **ePGU** ist eine Plattform bzw. ein Application Cluster und wird daher **nicht** als T/TV modelliert.
+- Wenn eine Fachanwendung wie AutoStup in die ePGU-Plattform integriert wird, ist dies Architekturkontext auf der entsprechenden Anwendungsebene; daraus wird keine Technologiezuordnung abgeleitet.
 
 ## Dateinamen in GitHub
 
