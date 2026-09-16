@@ -24,39 +24,33 @@ Die Grafik zeigt die Objekte und Beziehungen einschliesslich der temporären Zuo
 
 ## Technologiegruppen
 
-Die Technologiegruppen sind fachanwendungsunabhängig. Gleichartige Gruppen werden nur einmal geführt und können Technologien aus mehreren Fachanwendungen gruppieren.
+Die Technologiegruppen sind fachanwendungsunabhängig. Gleichartige Gruppen werden nur einmal geführt und können Technologien aus mehreren Fachanwendungen gruppieren. Der Modellstand umfasst acht Technologiegruppen:
 
 | Schlüssel | Technologiegruppe |
 |---|---|
-| **TG-001** | Protokolle & Standards |
-| **TG-004** | Protokolle & Datenformate |
-| **TG-005** | Webserver |
-| **TG-006** | Backend-Technologie |
-| **TG-007** | Betriebsplattform |
+| **TG-001** | Integration & Interoperabilität |
+| **TG-005** | Web & Applikation |
+| **TG-007** | Plattform & Cloud |
 | **TG-008** | Datenanalyse & Orchestrierung |
-| **TG-009** | Datenbank & Storage |
-| **TG-010** | Interoperabilitätsstandards |
-| **TG-011** | Test- und Interoperabilitätsplattform |
-| **TG-012** | Web & Cloud |
+| **TG-009** | Datenmanagement & Storage |
+| **TG-011** | Test & Validierung |
 | **TG-013** | Datenübertragung |
-| **TG-014** | Authentifizierung |
-| **TG-015** | Datenzugriff & Integration |
-| **TG-016** | Datenmodellierung |
-| **TG-017** | Client |
-| **TG-018** | Identity & Access Management |
-| **TG-019** | Datenbank & Integration |
-| **TG-020** | Interoperabilität & Cloud |
-| **TG-021** | Cloud & Data Lake |
+| **TG-014** | Identity & Access Management |
 
 ### Konsolidierungen
 
-Identische Technologiegruppen wurden zusammengeführt:
+Die bisherigen Technologiegruppen wurden auf acht fachanwendungsunabhängige Gruppen konsolidiert:
 
-- TG-002 und TG-003 → **TG-001 Protokolle & Standards**
-- TG-022 → **TG-018 Identity & Access Management**
-- TG-023 → **TG-013 Datenübertragung**
+- TG-001, TG-002, TG-003, TG-004, TG-010, TG-015 und TG-020 → **TG-001 Integration & Interoperabilität**
+- TG-005, TG-006 und TG-017 → **TG-005 Web & Applikation**
+- TG-007, TG-012 und TG-021 → **TG-007 Plattform & Cloud**
+- TG-008 → **TG-008 Datenanalyse & Orchestrierung**
+- TG-009, TG-016 und TG-019 → **TG-009 Datenmanagement & Storage**
+- TG-011 → **TG-011 Test & Validierung**
+- TG-013 und TG-023 → **TG-013 Datenübertragung**
+- TG-014, TG-018 und TG-022 → **TG-014 Identity & Access Management**
 
-Die bestehenden Schlüssel der bereits etablierten Gruppen bleiben erhalten.
+Die bestehenden Schlüssel der als Zielgruppen verwendeten TG bleiben erhalten. Nicht mehr benötigte TG-Dateien wurden aus der Datenbank entfernt.
 
 ## Beziehungen
 
@@ -79,12 +73,12 @@ Die beiden Beziehungen stellen somit zwei Zustände derselben Zuordnung dar. Fü
 ### Technologiegruppe, Technologie und Technologieversion
 
 ```text
-TG-xxx ── gruppiert ──> T-xxx ── hat Version ──> TV-xxx
+TG-xxx ── gruppiert ──> T-xxx ── gehört zu ──> TV-xxx
 ```
 
 Damit gilt die Modellierungsregel:
 
-**TG gruppiert T gruppiert TV**
+**TG gruppiert T; T gehört zu TV**
 
 Die Technologiegruppe ist kein Zwischenobjekt zwischen Fachanwendung und Technologie. Die Fachanwendung verwendet T bzw. nach Auflösung der Version TV direkt.
 
@@ -107,7 +101,7 @@ Auch hier stellen die beiden Beziehungen zwei Zustände derselben Zuordnung dar.
 ### Herstellerprodukt und Version
 
 ```text
-HP-xxx ── hat Version ──> HPV-xxx
+HP-xxx ── gehört zu ──> HPV-xxx
 ```
 
 ### Externe URLs
