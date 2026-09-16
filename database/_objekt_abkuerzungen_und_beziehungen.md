@@ -8,23 +8,21 @@ Diese Dokumentation beschreibt die im technischen Architekturmodell verwendeten 
 
 | Kürzel | Bezeichnung | Umfang |
 |---|---|---|
-| **FA** | Fachanwendung | Eine fachlich abgegrenzte Anwendung bzw. ein Anwendungssystem des BAG. Dazu gehören u. a. Name, IKT-ID, EA-Pfad, Owner, Betreiber, Alias, Innovator-UUID und externe URL. |
-| **TG** | Technologiegruppe | Eine Gruppierung von Technologien. Sie dient zur Strukturierung und Klassifikation von Technologien. Die Fachanwendung ist **nicht** Teil der TG-T-Beziehung. |
-| **T** | Technologie | Ein konkreter technischer Baustein bzw. eine Technologie, z. B. LDAP, X.509, FHIR, SFTP, Angular oder SLES. |
-| **TV** | Technologieversion | Eine konkrete Version einer Technologie, einschliesslich Lifecycle-Informationen wie End of Life, Betrieb von und Betrieb bis. Beispiel: SUSE Linux Enterprise Server 15. |
+| **FA** | Fachanwendung | Eine fachlich abgegrenzte Anwendung bzw. ein Anwendungssystem des BAG. |
+| **TG** | Technologiegruppe | Eine Gruppierung von Technologien. Sie dient zur Strukturierung und Klassifikation von Technologien. |
+| **T** | Technologie | Ein konkreter technischer Baustein bzw. eine Technologie. |
+| **TV** | Technologieversion | Eine konkrete Version einer Technologie, einschliesslich Lifecycle-Informationen. |
 | **HP** | Herstellerprodukt | Ein konkretes Produkt eines Herstellers, das bei einer Fachanwendung eingesetzt wird bzw. dessen Einsatz dokumentiert oder recherchiert wurde. |
-| **HPV** | Herstellerproduktversion | Eine konkrete Version eines Herstellerprodukts, einschliesslich Lifecycle-Informationen wie End of Life, End of Sales, End of Support sowie Betriebszeitraum. |
-| **URL** | Externe URL | Eine externe Referenz zu einem Objekt, z. B. eine offizielle BAG-Seite, Produktseite oder technische Dokumentation. Die URL wird über Objekttyp und Objektschlüssel einem Objekt zugeordnet. |
+| **HPV** | Herstellerproduktversion | Eine konkrete Version eines Herstellerprodukts, einschliesslich Lifecycle-Informationen. |
+| **URL** | Externe URL | Eine externe Referenz zu einem Objekt, z. B. eine offizielle BAG-Seite, Produktseite oder technische Dokumentation. |
 
-## Vollständige Liste der Technologiegruppen
+## Technologiegruppen
 
-Die Technologiegruppen bilden eine Strukturierungsebene für Technologien. Eine Technologiegruppe gruppiert Technologien; sie ist nicht als Zwischenobjekt zwischen Fachanwendung und Technologie zu verstehen.
+Die Technologiegruppen sind fachanwendungsunabhängig. Gleichartige Gruppen werden nur einmal geführt und können Technologien aus mehreren Fachanwendungen gruppieren.
 
 | Schlüssel | Technologiegruppe |
 |---|---|
 | **TG-001** | Protokolle & Standards |
-| **TG-002** | Protokolle & Standards |
-| **TG-003** | Protokolle & Standards |
 | **TG-004** | Protokolle & Datenformate |
 | **TG-005** | Webserver |
 | **TG-006** | Backend-Technologie |
@@ -43,84 +41,46 @@ Die Technologiegruppen bilden eine Strukturierungsebene für Technologien. Eine 
 | **TG-019** | Datenbank & Integration |
 | **TG-020** | Interoperabilität & Cloud |
 | **TG-021** | Cloud & Data Lake |
-| **TG-022** | Identity & Access Management |
-| **TG-023** | Datenübertragung |
+
+### Konsolidierungen
+
+Identische Technologiegruppen wurden zusammengeführt:
+
+- TG-002 und TG-003 → **TG-001 Protokolle & Standards**
+- TG-022 → **TG-018 Identity & Access Management**
+- TG-023 → **TG-013 Datenübertragung**
+
+Die bestehenden Schlüssel der bereits etablierten Gruppen bleiben erhalten.
 
 ## Beziehungen
 
-Beziehungen sind kein eigener fachlicher Objekttyp mit einem Kürzel wie FA, T oder HP. Sie werden über die beteiligten Schlüssel identifiziert.
-
 ### Fachanwendung und Technologieversion
 
-Die zentrale Architekturbeziehung ist **direkt zwischen Fachanwendung und Technologieversion**:
-
 ```text
-FA-xxx  ── verwendet ──>  TV-xxx
+FA-xxx ── verwendet ──> TV-xxx
 ```
 
-Eine Fachanwendung verwendet damit eine konkrete Technologieversion. Die Technologieversion verweist auf die übergeordnete Technologie.
-
-```text
-FA-xxx  ── verwendet ──>  TV-xxx
-                           │
-                           └── gehört zu ──> T-xxx
-```
+Eine Fachanwendung verwendet eine konkrete Technologieversion.
 
 ### Technologiegruppe, Technologie und Technologieversion
 
-Die technische Strukturierung erfolgt unabhängig von der FA-Beziehung:
-
 ```text
-TG-xxx  ── gruppiert ──>  T-xxx  ── gruppiert/umfasst ──>  TV-xxx
+TG-xxx ── gruppiert ──> T-xxx ── hat Version ──> TV-xxx
 ```
 
-Damit gilt als Modellierungsregel:
+Damit gilt die Modellierungsregel:
 
 **TG gruppiert T gruppiert TV**
 
-Die Technologiegruppe wird somit nicht benötigt, um die Beziehung einer Fachanwendung zu ihrer verwendeten Technologieversion herzustellen.
+Die Technologiegruppe ist kein Zwischenobjekt zwischen Fachanwendung und Technologieversion.
 
 ### Herstellerprodukt und Version
 
-Analog werden Herstellerprodukte und deren Versionen getrennt modelliert:
-
 ```text
-HP-xxx  ── hat Version ──>  HPV-xxx
+HP-xxx ── hat Version ──> HPV-xxx
 ```
 
-### Gesamtbild
-
-```text
-                    ┌─────────────────┐
-                    │ Fachanwendung   │
-                    │      FA         │
-                    └────────┬────────┘
-                             │ verwendet
-                             ▼
-                    ┌─────────────────┐
-                    │Technologieversion│
-                    │      TV         │
-                    └────────┬────────┘
-                             │ gehört zu
-                             ▼
-                    ┌─────────────────┐
-                    │  Technologie    │
-                    │       T         │
-                    └────────┬────────┘
-                             │ gruppiert durch
-                             ▼
-                    ┌─────────────────┐
-                    │Technologiegruppe│
-                    │       TG        │
-                    └─────────────────┘
-
-                    HP ──> HPV
-                    FA/T/TV/HP ──> URL
-```
-
-## Dateinamen in GitHub
-
-Die Modellobjekte werden einzeln gespeichert:
+### Dateinamen in GitHub
 
 - `fachanwendungen/FA-xxx.xml`
 - `technologiegruppen/TG-xxx.xml`
@@ -134,5 +94,3 @@ Die Modellobjekte werden einzeln gespeichert:
 Beispiel einer direkten Architekturbeziehung:
 
 `beziehungen/FA-002__TV-xxx.xml`
-
-Die Beziehung enthält den Beziehungstyp und den Datenstatus. Die Dateistruktur macht die beteiligten Objekte unmittelbar erkennbar.
