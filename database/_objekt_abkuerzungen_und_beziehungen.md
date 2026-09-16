@@ -4,6 +4,12 @@
 
 Diese Dokumentation beschreibt die im technischen Architekturmodell verwendeten Objektkürzel sowie die grundlegenden Beziehungen zwischen den Objekttypen.
 
+## Metamodell – Übersicht
+
+![Metamodell Technische Architektur BAG](../docs/metamodell-technische-architektur.svg)
+
+Die Grafik zeigt die Objekte und Beziehungen einschliesslich der temporären Zuordnungen auf Technologie- bzw. Herstellerproduktebene.
+
 ## Objektkürzel
 
 | Kürzel | Bezeichnung | Umfang |
@@ -103,6 +109,10 @@ Auch hier stellen die beiden Beziehungen zwei Zustände derselben Zuordnung dar.
 ```text
 HP-xxx ── hat Version ──> HPV-xxx
 ```
+
+### Externe URLs
+
+Externe URLs können als Referenzen an den jeweiligen Modellobjekten geführt werden. Eine URL ist dabei kein Bestandteil der fachlichen bzw. technischen Hierarchie, sondern eine externe Referenz auf ein Objekt.
 
 ### Dateinamen in GitHub
 
