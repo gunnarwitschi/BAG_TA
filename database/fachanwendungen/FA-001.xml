@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><Fachanwendung xmlns="https://gunnarwitschi.github.io/BAG_TA/schema"><Schlüssel>FA-001</Schlüssel><IKT_ID>24240</IKT_ID><IKT_ID_Status>vorhanden</IKT_ID_Status><Fachanwendung>Abfragedienste EPGD</Fachanwendung><EA-Pfad>1.1.1.1</EA-Pfad><Owner></Owner><Alias></Alias><Betreiber></Betreiber><Innovator_UUID>41815d48-13cb-84be-1d89-6e7a9f87ed4c</Innovator_UUID><Notiz>Der Bund betreibt sogenannte Zentrale Dienste, welche für den korrekten Betrieb der
- verteilten Architektur benötigt werden:
- • Dienst zur Abfrage des sektoriellen Personenidentifikators für das EPD (EPR-SPID).
- Wir durch die zentrale Ausgleichsstelle geführt.
- • MI: Katalog der Value Sets der Dokument-Metadaten und der Value Sets zur Kodierung
- der strukturierten Daten der Austauschformate.
- • CPI: Zugangspunkte der (Stamm-)Gemeinschaften: Katalog der Informationen und
- Daten, welche für die gemeinschaftsübergreifende Kommunikation benötigt werden.
- • HPD: Verzeichnis der an das EPD angeschlossenen Gesundheitsfachpersonen und
- Institutionen: Zweckgebundene Sammlung der Institutionen, Gesundheitsfachpersonen und
- Gruppen von Gesundheitsfachpersonen, welche von Patientinnen und Patienten für den
- Zugriff auf das EPD berechtigt werden können.
-
- Startseite für Patienten: https://www.patientendossier.ch/
-
- Technische Dokumentation: https://www.fedlex.admin.ch/eli/oc/2023/221/de/annexes</Notiz><Externe_URL>https://www.patientendossier.ch/</Externe_URL></Fachanwendung>
+<?xml version="1.0" encoding="UTF-8"?><Fachanwendung xmlns="https://gunnarwitschi.github.io/BAG_TA/schema"><Schlüssel>FA-001</Schlüssel><IKT_ID>24240</IKT_ID><IKT_ID_Status>vorhanden</IKT_ID_Status><Fachanwendung>Abfragedienste EPGD</Fachanwendung><EA-Pfad>1.1.1.1</EA-Pfad><Owner></Owner><Alias></Alias><Betreiber></Betreiber><Innovator_UUID>41815d48-13cb-84be-1d89-6e7a9f87ed4c</Innovator_UUID><Notiz>Der Bund betreibt Zentrale Dienste für die verteilte EPD-Architektur. Öffentlich belegte technische Standards/Protokolle: IHE, XDS/XDS Metadata, XUA, ATNA/Audit Trail, FHIR, eCH-0213/eCH-0214/eCH-0215, EPDV-EDI, TLS/X.509 und sedex. eCH-0213 dient Meldungen/Verwaltung, eCH-0214 Abfragen und eCH-0215 Broadcast. Synchroner Austausch erfolgt über Web Services; Broadcast über sedex. Keine konkreten Technologieversionen öffentlich belastbar belegt. Bestehende fachliche Zentraldienste: EPR-SPID, MI, CPI und HPD. Startseite: https://www.patientendossier.ch/ Technische Dokumentation: https://www.fedlex.admin.ch/eli/oc/2023/221/de/annexes</Notiz><Externe_URL>https://www.patientendossier.ch/</Externe_URL></Fachanwendung>
