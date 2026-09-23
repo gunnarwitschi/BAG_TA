@@ -10,3 +10,8 @@ Dieses Repository enthält die daraus abgeleitete, für die technische Architekt
 Die Quelldaten wurden bereinigt hinsichtlich offensichtlicher Zeichencodierungsfehler (Mojibake). Inhaltliche Tippfehler wurden nicht stillschweigend korrigiert.
 
 Die technische Erweiterung in Schritt 2 enthält nur Angaben, die in der zugrunde liegenden Dokumentation oder durch explizit recherchierte öffentliche Quellen gestützt sind. Nicht belegte technische Details bleiben offen.
+
+
+## Erweiterung September 2026
+
+Ergänzt wurden die recherchierten Fachanwendungen FA-085 bis FA-092. Bestehende Einträge wie CH-SUR und Health Person Directory BAG wurden nicht dupliziert.
