@@ -8,8 +8,8 @@ Ausgangspunkt ist **„Fachanwendungen L1“, Version 1.0 Proposed, generiert am
 
 Die Daten wurden für die weitere technische Architekturarbeit normalisiert:
 
-- 84 Fachanwendungen
-- Primärschlüssel: `FA-001` bis `FA-084`
+- 92 Fachanwendungen
+- Primärschlüssel: `FA-001` bis `FA-092`
 - `IKT_ID` bleibt als sekundärer Schlüssel erhalten, sofern vorhanden
 - 22 Technologiegruppen
 - 47 Technologien
